@@ -5,12 +5,12 @@
 class Nameocean < Formula
   desc "NameOcean CLI for app servers, domains, DNS, SSL and MCP setup"
   homepage "https://nameocean.net/developers/cli/"
-  version "0.6.6"
+  version "0.6.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/NameOcean/nameocean-cli-releases/releases/download/v0.6.6/nameocean_0.6.6_darwin_amd64.tar.gz"
-      sha256 "3b05977bf4263e74fc95299beb22a31431771be5865b76a0399357a1596bdf6a"
+      url "https://github.com/NameOcean/nameocean-cli-releases/releases/download/v0.6.7/nameocean_0.6.7_darwin_amd64.tar.gz"
+      sha256 "e3f9c36d645b4a6c6dd796be3162c299b23256df20523b173cdcf144e7c58445"
 
       define_method(:install) do
         bin.install "nameocean"
@@ -18,8 +18,8 @@ class Nameocean < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/NameOcean/nameocean-cli-releases/releases/download/v0.6.6/nameocean_0.6.6_darwin_arm64.tar.gz"
-      sha256 "569afd2d50b4d9aeb8b2e642fcbbc7aecdaa2f965638303cd2d2273af23a504d"
+      url "https://github.com/NameOcean/nameocean-cli-releases/releases/download/v0.6.7/nameocean_0.6.7_darwin_arm64.tar.gz"
+      sha256 "c7624ba827755c8a1fbfc5b63a87576c1159730ea54be14d86db43e2b041ccb5"
 
       define_method(:install) do
         bin.install "nameocean"
@@ -30,16 +30,16 @@ class Nameocean < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/NameOcean/nameocean-cli-releases/releases/download/v0.6.6/nameocean_0.6.6_linux_amd64.tar.gz"
-      sha256 "dfe5c4ec7f01500512f4a546917860af65b6f1c742af3611a6cd5be6dbb01269"
+      url "https://github.com/NameOcean/nameocean-cli-releases/releases/download/v0.6.7/nameocean_0.6.7_linux_amd64.tar.gz"
+      sha256 "f4c19e413cccd5a73179f0bab5dab3036ba2e41690bb2d0e89292af87940344f"
       define_method(:install) do
         bin.install "nameocean"
         generate_completions_from_executable(bin/"nameocean", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/NameOcean/nameocean-cli-releases/releases/download/v0.6.6/nameocean_0.6.6_linux_arm64.tar.gz"
-      sha256 "8882e4b6372b5a15be5c582ca442bd962ec89fe04a455ccb22ce732b8bcd14cd"
+      url "https://github.com/NameOcean/nameocean-cli-releases/releases/download/v0.6.7/nameocean_0.6.7_linux_arm64.tar.gz"
+      sha256 "2d58a077813db2afe5cb1b55e15f9ee15b34deab931564a3d3f2e1fde5b5ecd6"
       define_method(:install) do
         bin.install "nameocean"
         generate_completions_from_executable(bin/"nameocean", "completion")
